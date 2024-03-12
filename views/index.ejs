@@ -3,9 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Stock Market Tracker</title>
 </head>
 <body>
-    <%= data %>
+    <h1>Welcome to the Stock Market Tracker API tool</h1>
+    <p>Please go to <a href="https://site.financialmodelingprep.com/developer/docs">this link</a> to get your own unique API Key.</p>
+
+     
+        <form action="/search" method="POST">
+        <label for="name">Enter the company that you would like to lookup</label>
+        <input type="text" name="name"/>
+        <input type="submit"/>
+    </form>
+
+    <% if (typeof data != 'undefined') { %>
+     <%= data %>
+    <% } %>
 </body>
 </html>
